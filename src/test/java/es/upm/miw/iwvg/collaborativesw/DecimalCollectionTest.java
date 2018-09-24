@@ -26,8 +26,15 @@ class DecimalCollectionTest {
     }
 
     @Test
+    void testSize() {
+        assertEquals(4, this.decimalCollection.size());
+    }
+
+    @Test
     void testAdd() {
         assertEquals(4, this.decimalCollection.size());
+        this.decimalCollection.add(31.0);
+        assertEquals(5, this.decimalCollection.size());
     }
 
     @Test
