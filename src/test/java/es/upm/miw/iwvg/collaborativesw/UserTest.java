@@ -22,7 +22,6 @@ class UserTest {
     @Test
     void testInitials() {
         assertEquals("R.", user.initials());
-
     }
 
     @Test
@@ -38,5 +37,10 @@ class UserTest {
     @Test
     void testGetFamilyName() {
         assertEquals("Roca", user.getFamilyName());
+    }
+
+    @Test
+    void testFullNameUpperCase() {
+        assertEquals("RAMÓN ROCA", user.fullNameUpperCase());
     }
 }
