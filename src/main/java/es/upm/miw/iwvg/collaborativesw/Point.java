@@ -39,6 +39,20 @@ public class Point {
         return this.y;
     }
 
+    public int getQuadrant() {
+        if (this.x == 0 || this.y == 0) {
+            return 0;
+        } else if (this.x > 0 && this.y > 0) {
+            return 1;
+        } else if (this.x < 0 && this.y > 0) {
+            return 2;
+        } else if (this.x < 0 && this.y < 0) {
+            return 3;
+        } else {
+            return 4;
+        }
+    }
+
     @Override
     public String toString() {
         return "Point{" +
