@@ -1,4 +1,5 @@
 package es.upm.miw.iwvg.collaborativesw;
+
 public class User {
 
     private int number;
@@ -37,4 +38,7 @@ public class User {
         return this.familyName;
     }
 
+    public String fullNameUpperCase() {
+        return this.name.toUpperCase() + " " + this.familyName.toUpperCase();
+    }
 }
