@@ -41,4 +41,13 @@ public class FractionTest {
         assertEquals(2, this.middel.inverse().getNumerator());
         assertEquals(1, this.middel.inverse().getDenominator());
     }
+
+    @Test
+    void testAdd() {
+        Fraction newFraction = new Fraction(4, 2);
+        Fraction compareFraction = this.defaultFraction.add(newFraction);
+
+        assertEquals(6, compareFraction.getNumerator());
+        assertEquals(2, compareFraction.getDenominator());
+    }
 }
