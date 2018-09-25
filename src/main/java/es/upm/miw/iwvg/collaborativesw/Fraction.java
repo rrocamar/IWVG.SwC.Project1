@@ -31,4 +31,13 @@ public class Fraction {
         return new Fraction(this.getDenominator(), this.getNumerator());
     }
 
+    public Fraction add(Fraction fraction) {
+        assert fraction != null;
+
+        int newNumerador = (this.numerator * fraction.getDenominator()) + (this.denominator * fraction.getNumerator());
+        int newDenominador = (this.denominator * fraction.getDenominator());
+
+        return new Fraction(newNumerador, newDenominador);
+
+    }
 }
