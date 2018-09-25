@@ -6,10 +6,20 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 
 class PointTest {
     private Point point;
+    private Point quadran0;
+    private Point quadran1;
+    private Point quadran2;
+    private Point quadran3;
+    private Point quadran4;
 
     @BeforeEach
     void before() {
         point = new Point(2, 3);
+        quadran0 = new Point(0, 0);
+        quadran1 = new Point(1, 1);
+        quadran2 = new Point(-1, 3);
+        quadran3 = new Point(-2, -3);
+        quadran4 = new Point(2, -3);
     }
 
     @Test
@@ -47,6 +57,31 @@ class PointTest {
         this.point.translateOrigin(new Point(1, 1));
         assertEquals(1, point.getX());
         assertEquals(2, point.getY());
+    }
+
+    @Test
+    void testQuadran0(){
+        assertEquals(0, quadran0.getQuadrant());
+    }
+
+    @Test
+    void testQuadran1(){
+        assertEquals(1, quadran1.getQuadrant());
+    }
+
+    @Test
+    void testQuadran2(){
+        assertEquals(2, quadran2.getQuadrant());
+    }
+
+    @Test
+    void testQuadran3(){
+        assertEquals(3, quadran3.getQuadrant());
+    }
+
+    @Test
+    void testQuadran4(){
+        assertEquals(4, quadran4.getQuadrant());
     }
 
 }
