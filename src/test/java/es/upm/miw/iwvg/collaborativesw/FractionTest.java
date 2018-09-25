@@ -35,4 +35,10 @@ public class FractionTest {
     void testDecimal() {
         assertEquals(0.5, middel.decimal(), 0.01);
     }
+
+    @Test
+    void testInverse() {
+        assertEquals(2, this.middel.inverse().getNumerator());
+        assertEquals(1, this.middel.inverse().getDenominator());
+    }
 }
