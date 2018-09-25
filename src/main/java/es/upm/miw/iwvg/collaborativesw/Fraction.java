@@ -27,4 +27,8 @@ public class Fraction {
         return denominator;
     }
 
+    public Fraction inverse() {
+        return new Fraction(this.getDenominator(), this.getNumerator());
+    }
+
 }
