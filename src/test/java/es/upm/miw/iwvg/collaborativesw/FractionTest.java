@@ -32,6 +32,12 @@ public class FractionTest {
     }
 
     @Test
+    void testMultiply() {
+        assertEquals(1, middel.multiply(middel).getNumerator());
+        assertEquals(4, middel.multiply(middel).getDenominator());
+    }
+
+    @Test
     void testDecimal() {
         assertEquals(0.5, middel.decimal(), 0.01);
     }

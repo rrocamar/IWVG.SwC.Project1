@@ -31,6 +31,8 @@ public class Fraction {
         return new Fraction(this.getDenominator(), this.getNumerator());
     }
 
+    public Fraction multiply(Fraction multiplied){return new Fraction(numerator*multiplied.getNumerator(),denominator*multiplied.getDenominator());}
+
     public Fraction add(Fraction fraction) {
         assert fraction != null;
 
