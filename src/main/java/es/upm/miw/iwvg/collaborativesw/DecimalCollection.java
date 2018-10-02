@@ -27,6 +27,20 @@ public class DecimalCollection {
         return this.collection.stream().mapToDouble(Double::doubleValue).sum();
 
     }
+    public double lower() {
+        assert collection != null;
+        if (this.collection.isEmpty()) {
+            throw new ArithmeticException("Empty collection");
+        }
+        double lower = Double.POSITIVE_INFINITY;
+        for (double item : this.collection) {
+            if (item < lower) {
+                lower = item;
+            }
+        }
+        return lower;
+    }
+
 
     public double higher() {
         assert collection != null;
