@@ -27,4 +27,19 @@ public class Fraction {
         return denominator;
     }
 
+    public Fraction inverse() {
+        return new Fraction(this.getDenominator(), this.getNumerator());
+    }
+
+    public Fraction multiply(Fraction multiplied){return new Fraction(numerator*multiplied.getNumerator(),denominator*multiplied.getDenominator());}
+
+    public Fraction add(Fraction fraction) {
+        assert fraction != null;
+
+        int newNumerador = (this.numerator * fraction.getDenominator()) + (this.denominator * fraction.getNumerator());
+        int newDenominador = (this.denominator * fraction.getDenominator());
+
+        return new Fraction(newNumerador, newDenominador);
+
+    }
 }

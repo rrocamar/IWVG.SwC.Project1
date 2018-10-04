@@ -32,7 +32,28 @@ public class FractionTest {
     }
 
     @Test
+    void testMultiply() {
+        assertEquals(1, middel.multiply(middel).getNumerator());
+        assertEquals(4, middel.multiply(middel).getDenominator());
+    }
+
+    @Test
     void testDecimal() {
         assertEquals(0.5, middel.decimal(), 0.01);
+    }
+
+    @Test
+    void testInverse() {
+        assertEquals(2, this.middel.inverse().getNumerator());
+        assertEquals(1, this.middel.inverse().getDenominator());
+    }
+
+    @Test
+    void testAdd() {
+        Fraction newFraction = new Fraction(4, 2);
+        Fraction compareFraction = this.defaultFraction.add(newFraction);
+
+        assertEquals(6, compareFraction.getNumerator());
+        assertEquals(2, compareFraction.getDenominator());
     }
 }
